@@ -1,0 +1,35 @@
+<body class="bg-gray-300">
+  <div class="p-8 bg-blue-50 rounded-lg shadow-md">
+    <form [formGroup]="miForm" (ngSubmit)="onSubmit()" class="grid grid-cols-2 gap-4 mb-4">
+      <div class="mb-4">
+        <label for="Nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+        <input formControlName="Nombre" type="text" id="Nombre"
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               placeholder="Ingrese el Nombre"/>
+      </div>
+      <div class="mb-4">
+        <label for="Apellidos" class="block text-gray-700 text-sm font-bold mb-2">Apellidos</label>
+        <input formControlName="Apellidos" type="text" id="Apellidos"
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               placeholder="Ingrese los apellidos"/>
+      </div>
+      <div class="mb-4">
+        <label for="DNI" class="block text-gray-700 text-sm font-bold mb-2">DNI</label>
+        <input formControlName="DNI" type="text" id="DNI"
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               placeholder="Ingrese el DNI"/>
+      </div>
+      <div class="mb-4">
+        <label for="Telefono" class="block text-gray-700 text-sm font-bold mb-2">Telefono</label>
+        <input formControlName="Telefono" type="text" id="Telefono"
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               placeholder="Ingrese el Telefono"/>
+      </div>
+      
+      <button (click)="sendForm($event)" [disabled]="!miForm.valid"
+              class="col-span-2 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Agregar Alumno
+      </button>
+    </form>
+  </div>
+</body>

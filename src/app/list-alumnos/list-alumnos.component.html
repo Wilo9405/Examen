@@ -1,0 +1,4 @@
+<div class="mx-auto md:w-2/3 lg:w-1/3 bg-gray-100">
+    <app-form-alumnos (alum)="addAlumno($event)"></app-form-alumnos>
+    <app-items-alumnos [alumnoInput]="alumnos" (remove)="eliminar($event)"></app-items-alumnos>
+  </div>
